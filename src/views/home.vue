@@ -1,6 +1,6 @@
 <template>
   <v-row align="center" justify="center" no-gutters>
-    <v-col
+      <v-col @click="$router.push({ path: '/records', replace: true })"
         cols="12"
         sm="4"
       >
@@ -21,7 +21,7 @@
           </div>
         </v-card>
       </v-col>
-      <v-col
+      <v-col @click="$router.push({ path: '/papers', replace: true })"
       sm="4"
       cols="12"
       >
