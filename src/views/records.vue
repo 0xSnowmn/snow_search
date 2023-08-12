@@ -1,6 +1,6 @@
 <template>
   <div>
-  <h1 class="text-center">Hello</h1>
+  <h1 style="font-family: 'Cairo', sans-serif;" class="text-center mb-5">المحاضرات</h1>
   <v-row >
     <v-col v-for="n in 7"
         sm="3"
@@ -10,14 +10,14 @@
           tile
           width="344"
           height="200"
-        ><h2 class="rec text-center mt-10"> التسجيلات</h2>
+        ><h2 class="rec text-center mt-10"> المحاضرة</h2>
           
-          <div class="text-center mt-10">
-            <v-icon id="iconx"
+          <div class="text-center mt-5">
+            <h3 id="iconx"
       color="red darken-2"
     >
-     mdi-account-voice
-    </v-icon>
+     {{ n }}
+          </h3>
           </div>
         </v-card>
       </v-col>
@@ -36,10 +36,12 @@
 </script>
 <style>
 #iconx {
-  font-size: 30px;
+  font-size: 40px;
 }
 .rec {
   font-family: 'Cairo', sans-serif;
+  color:#E65100
+;
 
 }
 </style>
