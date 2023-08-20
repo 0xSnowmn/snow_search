@@ -1,6 +1,6 @@
 <template>
   <v-row align="center" justify="center" no-gutters>
-      <v-col @click="$router.push({ path: '/records', replace: true })"
+      <v-col @click="$router.push({ path: current.path + '/records', replace: true })"
         cols="12"
         sm="4"
       >
@@ -21,7 +21,7 @@
           </div>
         </v-card>
       </v-col>
-      <v-col @click="$router.push({ path: '/papers', replace: true })"
+      <v-col @click="$router.push({ path: current.path + '/papers', replace: true })"
       sm="4"
       cols="12"
       >
@@ -49,9 +49,17 @@
 
   export default {
     name: 'Home',
+    data(){
+      return {
+        current: this.$router.currentRoute
+      }
+    },
 
     components: {
     },
+    created(){
+      console.log(this.current.path)//
+    }
   }
 </script>
 <style>

@@ -2,7 +2,7 @@
   <div>
   <h1 style="font-family: 'Cairo', sans-serif;" class="text-center mb-5">التسجيلات</h1>
   <v-row >
-    <v-col v-for="n in 7"
+    <v-col @click="$router.push({ path: current.path + '/' + n, replace: true })" v-for="n in 7"
         sm="3"
       >
       <box title="التسجيل" v-bind:number="n"></box>
@@ -15,7 +15,11 @@
 import box from '@/components/boxes.vue'
   export default {
     name: 'records',
-
+    data(){
+      return {
+        current: this.$router.currentRoute
+      }
+    },
     components: {
       box
     },

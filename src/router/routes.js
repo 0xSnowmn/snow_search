@@ -15,14 +15,21 @@ const routes = [
       }
     },
     {
-      path: '/records',
+      path: '/subjects/:id',
+      name: 'subjects',
+      component: function () {
+        return import(/* webpackChunkName: "home" */ '../views/home.vue')
+      }
+    },
+    {
+      path: '/subjects/:id/records',
       name: 'records',
       component: function () {
         return import(/* webpackChunkName: "records" */ '../views/records.vue')
       }
     },
     {
-      path: '/papers',
+      path: '/subjects/:id/papers',
       name: 'papers',
       component: function () {
         return import(/* webpackChunkName: "papers" */ '../views/papers.vue')
