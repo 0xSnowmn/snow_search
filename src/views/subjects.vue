@@ -2,10 +2,10 @@
     <div>
     <h1 style="font-family: 'Cairo', sans-serif;" class="text-center mb-5">المواد</h1>
     <v-row >
-      <v-col v-for="n in 7"
+      <v-col  @click="$router.push({ path: '/papers/' + n, replace: true })" v-for="n in 7"
           sm="3"
         >
-        <box title="المواد" v-bind:number="n"></box>
+        <box title="مادة" v-bind:number="n"></box>
         </v-col>
       </v-row>
     </div>
