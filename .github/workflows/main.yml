@@ -36,7 +36,7 @@ jobs:
 
       - name: Configure SonarScanner
         run: |
-          echo "sonar.projectKey=d13EJcDitIJgbPB0" >> sonar-project.properties
+          echo "sonar.projectKey=f7Fb1q9eDlSYfg25" >> sonar-project.properties
           echo "sonar.sources=." >> sonar-project.properties
           echo "sonar.host.url=${{ secrets.SONAR_HOST_URL }}" >> sonar-project.properties
           echo "sonar.login=${{ secrets.SONAR_TOKEN }}" >> sonar-project.properties
